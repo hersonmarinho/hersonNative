@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card>
+    <img src="{{ img }}" *ngIf="img !== ''"/>
+
+    <ion-card-content>
+
+      <p>
+        Latitude Atual: {{ lat }}
+      </p>
+      <p>
+        Longitude Atual: {{ lon }}
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button (click)="getPic('take')">Tirar Foto</button>
+  <button ion-button (click)="getPic('select')">Selecionar Foto Existente</button>
+  <button ion-button (click)="getPic('')">Remover Foto</button>
+  <button ion-button (click)="getLocation()">Visualizar Coordenadas</button>
+
+
+
+</ion-content>
